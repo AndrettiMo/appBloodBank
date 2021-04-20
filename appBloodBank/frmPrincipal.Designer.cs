@@ -1,6 +1,6 @@
 ﻿namespace appBloodBank
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 265);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(787, 430);
+            this.Name = "frmPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
