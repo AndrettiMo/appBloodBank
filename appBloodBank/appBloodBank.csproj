@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,16 +51,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clDonante.cs" />
+    <Compile Include="Datos\clMostrar.cs" />
     <Compile Include="Datos\clPrincipal.cs" />
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="Presentacion\frmDonante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="Presentacion\frmDonante.Designer.cs">
+      <DependentUpon>frmDonante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="Presentacion\frmDonante.resx">
+      <DependentUpon>frmDonante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,9 +96,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentacion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
