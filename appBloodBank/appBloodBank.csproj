@@ -54,6 +54,12 @@
     <Compile Include="Datos\clDonante.cs" />
     <Compile Include="Datos\clMostrar.cs" />
     <Compile Include="Datos\clPrincipal.cs" />
+    <Compile Include="Presentacion\frmBolsaSangre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmBolsaSangre.Designer.cs">
+      <DependentUpon>frmBolsaSangre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmDonante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmBolsaSangre.resx">
+      <DependentUpon>frmBolsaSangre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmDonante.resx">
       <DependentUpon>frmDonante.cs</DependentUpon>
     </EmbeddedResource>
