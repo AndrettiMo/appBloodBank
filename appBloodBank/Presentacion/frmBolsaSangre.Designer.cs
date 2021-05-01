@@ -35,16 +35,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.cmbModificacion = new System.Windows.Forms.ComboBox();
+            this.cmbMetodoObtencion = new System.Windows.Forms.ComboBox();
+            this.cmbTemperatura = new System.Windows.Forms.TextBox();
+            this.cmbVolumen = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.cmbClasificacion = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbGrupoSanguineo = new System.Windows.Forms.ComboBox();
+            this.cmbFactor = new System.Windows.Forms.ComboBox();
+            this.dgvBolsaSangre = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBolsaSangre)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,14 +114,73 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Clasificacion del donante";
             // 
-            // label8
+            // label11
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(63, 321);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Grupo sanguineo";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(63, 394);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(163, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Resultado de pruebas de analisis";
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.Location = new System.Drawing.Point(298, 38);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(202, 20);
+            this.txtNombreProducto.TabIndex = 11;
+            // 
+            // cmbModificacion
+            // 
+            this.cmbModificacion.FormattingEnabled = true;
+            this.cmbModificacion.Location = new System.Drawing.Point(298, 74);
+            this.cmbModificacion.Name = "cmbModificacion";
+            this.cmbModificacion.Size = new System.Drawing.Size(121, 21);
+            this.cmbModificacion.TabIndex = 12;
+            // 
+            // cmbMetodoObtencion
+            // 
+            this.cmbMetodoObtencion.FormattingEnabled = true;
+            this.cmbMetodoObtencion.Items.AddRange(new object[] {
+            "Sangre total",
+            "Hemaferesis"});
+            this.cmbMetodoObtencion.Location = new System.Drawing.Point(298, 114);
+            this.cmbMetodoObtencion.Name = "cmbMetodoObtencion";
+            this.cmbMetodoObtencion.Size = new System.Drawing.Size(121, 21);
+            this.cmbMetodoObtencion.TabIndex = 13;
+            // 
+            // cmbTemperatura
+            // 
+            this.cmbTemperatura.Location = new System.Drawing.Point(298, 152);
+            this.cmbTemperatura.Name = "cmbTemperatura";
+            this.cmbTemperatura.Size = new System.Drawing.Size(121, 20);
+            this.cmbTemperatura.TabIndex = 14;
+            // 
+            // cmbVolumen
+            // 
+            this.cmbVolumen.Location = new System.Drawing.Point(298, 187);
+            this.cmbVolumen.Name = "cmbVolumen";
+            this.cmbVolumen.Size = new System.Drawing.Size(121, 20);
+            this.cmbVolumen.TabIndex = 15;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(298, 226);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 16;
+            // 
+            // cmbClasificacion
+            // 
+            this.cmbClasificacion.FormattingEnabled = true;
+            this.cmbClasificacion.Items.AddRange(new object[] {
+            "Voluntario",
+            "Familiar",
+            "Autologa"});
+            this.cmbClasificacion.Location = new System.Drawing.Point(298, 272);
+            this.cmbClasificacion.Name = "cmbClasificacion";
+            this.cmbClasificacion.Size = new System.Drawing.Size(121, 21);
+            this.cmbClasificacion.TabIndex = 17;
             // 
             // label9
             // 
@@ -128,82 +191,62 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Factor RHO";
             // 
-            // label11
+            // label8
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(63, 394);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(163, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Resultado de pruebas de analisis";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(63, 326);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Grupo sanguineo";
             // 
-            // textBox1
+            // cmbGrupoSanguineo
             // 
-            this.textBox1.Location = new System.Drawing.Point(298, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 11;
+            this.cmbGrupoSanguineo.FormattingEnabled = true;
+            this.cmbGrupoSanguineo.Items.AddRange(new object[] {
+            "Positivo",
+            "Negativo"});
+            this.cmbGrupoSanguineo.Location = new System.Drawing.Point(298, 317);
+            this.cmbGrupoSanguineo.Name = "cmbGrupoSanguineo";
+            this.cmbGrupoSanguineo.Size = new System.Drawing.Size(121, 21);
+            this.cmbGrupoSanguineo.TabIndex = 19;
             // 
-            // comboBox1
+            // cmbFactor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(298, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cmbFactor.FormattingEnabled = true;
+            this.cmbFactor.Items.AddRange(new object[] {
+            "O+",
+            "O-",
+            "AB+",
+            "AB-"});
+            this.cmbFactor.Location = new System.Drawing.Point(298, 351);
+            this.cmbFactor.Name = "cmbFactor";
+            this.cmbFactor.Size = new System.Drawing.Size(121, 21);
+            this.cmbFactor.TabIndex = 20;
             // 
-            // comboBox2
+            // dgvBolsaSangre
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Sangre total",
-            "Hemaferesis"});
-            this.comboBox2.Location = new System.Drawing.Point(298, 114);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(298, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(298, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 15;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(298, 226);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(298, 272);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 17;
+            this.dgvBolsaSangre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBolsaSangre.Location = new System.Drawing.Point(558, 38);
+            this.dgvBolsaSangre.Name = "dgvBolsaSangre";
+            this.dgvBolsaSangre.Size = new System.Drawing.Size(389, 335);
+            this.dgvBolsaSangre.TabIndex = 21;
             // 
             // frmBolsaSangre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 506);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1076, 505);
+            this.Controls.Add(this.dgvBolsaSangre);
+            this.Controls.Add(this.cmbFactor);
+            this.Controls.Add(this.cmbGrupoSanguineo);
+            this.Controls.Add(this.cmbClasificacion);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.cmbVolumen);
+            this.Controls.Add(this.cmbTemperatura);
+            this.Controls.Add(this.cmbMetodoObtencion);
+            this.Controls.Add(this.cmbModificacion);
+            this.Controls.Add(this.txtNombreProducto);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -216,6 +259,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmBolsaSangre";
             this.Text = "frmBolsaSangre";
+            this.Load += new System.EventHandler(this.frmBolsaSangre_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBolsaSangre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,15 +275,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txtNombreProducto;
+        private System.Windows.Forms.ComboBox cmbModificacion;
+        private System.Windows.Forms.ComboBox cmbMetodoObtencion;
+        private System.Windows.Forms.TextBox cmbTemperatura;
+        private System.Windows.Forms.TextBox cmbVolumen;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.ComboBox cmbClasificacion;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbGrupoSanguineo;
+        private System.Windows.Forms.ComboBox cmbFactor;
+        private System.Windows.Forms.DataGridView dgvBolsaSangre;
     }
 }

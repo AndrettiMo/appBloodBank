@@ -65,8 +65,9 @@
             this.dgvDonante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonante.Location = new System.Drawing.Point(505, 19);
             this.dgvDonante.Name = "dgvDonante";
-            this.dgvDonante.Size = new System.Drawing.Size(403, 285);
+            this.dgvDonante.Size = new System.Drawing.Size(409, 293);
             this.dgvDonante.TabIndex = 0;
+            this.dgvDonante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonante_CellContentClick_1);
             // 
             // label1
             // 
@@ -344,6 +345,7 @@
             this.Controls.Add(this.dgvDonante);
             this.Name = "frmDonante";
             this.Text = "frmDonante";
+            this.Load += new System.EventHandler(this.frmDonante_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

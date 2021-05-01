@@ -18,7 +18,7 @@ namespace appBloodBank.Datos
         {
             try
             {
-                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=bdBloodBank;Password=1234");
+                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=bdbloodbank;Password=1234");
 
             }
             catch (Exception error)
