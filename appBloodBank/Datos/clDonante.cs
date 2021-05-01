@@ -89,7 +89,7 @@ namespace appBloodBank.Datos
         public int mtdActualizar()
         {
            string fecha = Convert.ToDateTime(FechaNacimiento).ToString("yyyy-MM-dd");
-           string consulta = "update donante set Nombre='" + Nombre + "',Apellido='" + Apellido + "',NumeroDocumento='" + Documento + "',FechaNacimiento='" + fecha + "',Edad=" + Edad + ",Peso='" + Peso + "',Genero='" + Genero + "',Rh='" + Rh + "',PresionArterial='" + PresionArterial + "',Temperatura='" + Temperatura + "',Email='" + Email + "' ";
+           string consulta = "update donante set Nombre='" + Nombre + "',Apellido='" + Apellido + "',NumeroDocumento='" + Documento + "',FechaNacimiento='" + fecha + "',Edad=" + Edad + "',Peso='" + Peso + "',Genero='" + Genero + "',Rh='" + Rh + "',PresionArterial='" + PresionArterial + "',Temperatura='" + Temperatura + "',Email='" + Email + "'";
           int filas= objConexion.mtdConectado(consulta);
             return filas;
 

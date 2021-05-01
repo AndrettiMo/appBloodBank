@@ -17,7 +17,7 @@ namespace appBloodBank
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDonante());
+            Application.Run(new frmPrincipal());
         }
     }
 }

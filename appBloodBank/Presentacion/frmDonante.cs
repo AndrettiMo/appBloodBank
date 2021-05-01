@@ -39,6 +39,8 @@ namespace appBloodBank.Presentacion
 
 
             dgvDonante.DataSource = RegistrarDonante;
+               
+
 
         }
         clDonante objRegistrar = new clDonante();
@@ -109,15 +111,15 @@ namespace appBloodBank.Presentacion
             dgvDonante.DataSource = listaDonante;
         }
 
-
-        private void frmDonante_Load_1(object sender, EventArgs e)
+        private void frmDonante_Load_2(object sender, EventArgs e)
         {
             mtdRecargarGrid();
-
         }
 
+
         int idDonante = 0;
-        private void dgvDonante_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgvDonante_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
             if (dgvDonante.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -138,14 +140,9 @@ namespace appBloodBank.Presentacion
                 txtTelefono.Text = dgvDonante.Rows[e.RowIndex].Cells[11].FormattedValue.ToString();
                 txtEmail.Text = dgvDonante.Rows[e.RowIndex].Cells[12].FormattedValue.ToString();
 
-
-
-
             }
 
-
-
-        }
+            }
 
 
         public void mtdComprobar(int filas)
@@ -189,5 +186,8 @@ namespace appBloodBank.Presentacion
             }
             mtdComprobar(filas);
         }
+
+       
     }
+    
 }
